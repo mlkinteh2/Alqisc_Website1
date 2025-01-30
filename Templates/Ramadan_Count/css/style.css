@@ -1,0 +1,158 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:200i,400&display=swap");
+@font-face {
+    font-family: "AwalRamadhan";
+    src: url("../font/AwalRamadhan.ttf");
+}
+
+/* General Styling */
+html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    min-width: 300px; /* Prevents excessive shrinking */
+}
+
+body {
+    margin: 0;
+    height: 100vh; /* Full viewport height */
+    background-position: center;
+    background-size: cover;
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    justify-content: center; /* Centers main content horizontally */
+    align-items: center; /* Centers main content vertically */
+}
+
+/* Countdown Container */
+.mid {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%; /* Full width for smaller screens */
+    max-width: 1000px; /* Use more horizontal space on laptops */
+    padding: 20px;
+    text-align: center;
+    z-index: 2;
+}
+
+/* Card Container */
+.d-flex {
+    display: flex;
+    flex-wrap: nowrap; /* Prevent stacking */
+    justify-content: space-around; /* Distribute cards evenly horizontally */
+    gap: 10px; /* Add space between cards */
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+/* Cards */
+.card {
+    flex: 1 1 calc(20% - 5px); /* Cards take 20% of the row */
+    max-width: 150px; /* Limit maximum size */
+    min-width: 100px; /* Prevent shrinking too small */
+    text-align: center;
+    margin: 5px 0; /* Spacing between rows (if wrapping happens) */
+    padding: 10px;
+    border-radius: 24px; /* Rounded corners */
+    animation: pop-in 0.75s; /* Smooth entrance animation */
+}
+
+/* Card Heading */
+.card h2{
+    font-size: 3rem; /* Default font size */
+}
+.card h3 {
+    font-size: 2rem; /* Default font size */
+}
+
+/* Media Queries for Responsiveness */
+
+@media (min-width: 1200px) {
+    .card {
+      max-width: 120px; 
+      height: 200px;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .card {
+      flex-grow: 4.5; 
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .d-flex {
+      gap: 3px; 
+    }
+  }
+
+/* Light Theme */
+#light {
+    background-color: #fff;
+    color: #111;
+    -webkit-transition: 0.3s all;
+    transition: 0.3s all;
+}
+
+#light .card {
+    background: rgba(1, 1, 1, 0.1);
+}
+
+#light a {
+    color: #111;
+}
+
+/* Dark Theme */
+#dark {
+    background-color: #111;
+    color: #fff;
+    -webkit-transition: 0.3s all;
+    transition: 0.3s all;
+}
+
+#dark .card {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+#dark a {
+    color: #fff;
+}
+
+/* Animation for Smooth Pop-In */
+@keyframes pop-in {
+    0% {
+        transform: scale(0%);
+    }
+    100% {
+        transform: scale(100%);
+    }
+}
+
+/* Responsive Adjustments for Smaller Screens */
+@media (max-width: 576px) {
+    .mid {
+        max-width: 90%;
+    }
+    .d-flex {
+        flex-wrap: wrap; /* Allow wrapping on small screens */
+        justify-content: center; /* Center-align content */
+        gap: 10px; /* Reduce spacing */
+    }
+    .card {
+        flex: 1 1 calc(45% - 10px); /* Two cards per row */
+        max-width: 120px; /* Adjust size for smaller screens */
+    }
+}
+
+
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../img/freepik__upload__88852.jpeg') no-repeat center center;
+    background-size: cover;
+    z-index: 1;
+}

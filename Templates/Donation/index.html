@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donation Page</title>
+    <meta charset="utf-8">
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            display: flex;
+            max-width: 960px;
+            margin: 20px auto;
+            background: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .left, .right {
+            padding: 20px;
+        }
+
+        .left {
+            flex: 1;
+            background-color: #ffffff;
+        }
+
+        .right {
+            flex: 1;
+        }
+
+        h2 {
+            color: #34708D;
+            margin-bottom: 10px;
+            font-size: 1.5em;
+            text-align: center;
+        }
+
+        .donation-form {
+            background-color: #fff;
+            border: 1px solid #d3d3d3;
+            border-radius: 5px;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .donation-form input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .donation-form button {
+            background-color: #34708D;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            width: 100%;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+        }
+
+        .donation-form button:hover {
+            background-color: #FEBB0C;
+        }
+
+        .donation-options button {
+            background: #ddd;
+            border: none;
+            padding: 10px 20px;
+            margin: 5px;
+            cursor: pointer;
+            border-radius: 3px;
+            font-size: 0.9em;
+        }
+
+        .donation-options .active {
+            background-color: #34708D;
+            color: #fff;
+        }
+
+        .payment-icons img {
+            width: 200px;
+            margin: 10px 5px 0 0;
+        }
+
+        a {
+            color: #34708D;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Donate by Phone and Mail */
+        .right p {
+            margin-bottom: auto;
+    
+          
+        }
+
+        .highlight {
+            color: #000000;
+            font-weight: bold;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+  
+    <div class="container">
+        <!-- Left Section -->
+        <div class="left">
+            <div class="donation-form">
+                
+                <div class="payment-icons">
+                    <img src="TNG.jpg" alt="Visa">
+                    
+                </div>
+                
+                <p>TNG NO:<span class="highlight"> 100085239035</span></p>
+            
+                
+            </div>
+        </div>
+
+        <!-- Right Section -->
+        <div class="right">
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <h2>Contact us</h2>
+            <p style="text-align: center;">Contact No: <span class="highlight">+60177316088 (+60 17-731 6088)</span></p>
+
+            <h2>Contact by Mail</h2>
+            <p style="text-align: center;">Email (Outside): <span class="highlight">alqiscpersonal@gmail.com</span></p>
+            <p style="text-align: center;">Email (Inside): <span class="highlight">aqc@student.aiu.edu.my</span></p>
+            
+        </div>
+    </div>
+
+    <script>
+        function selectOption(option) {
+            const oneTimeBtn = document.getElementById('oneTimeBtn');
+            const monthlyBtn = document.getElementById('monthlyBtn');
+            
+            if (option === 'oneTime') {
+                oneTimeBtn.classList.add('active');
+                monthlyBtn.classList.remove('active');
+            } else {
+                monthlyBtn.classList.add('active');
+                oneTimeBtn.classList.remove('active');
+            }
+        }
+    </script>
+</body>
+</html>
